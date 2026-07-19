@@ -1,14 +1,113 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LINE HTML Notes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINE HTML Notes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f3f6fa;
+            color: #243142;
+            font-family: Arial, "Noto Sans Thai", sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 20px 14px 48px;
+        }
+
+        .hero {
+            background: #165a9f;
+            color: #ffffff;
+            border-radius: 18px;
+            padding: 24px 20px;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            margin: 0 0 8px;
+            font-size: 29px;
+        }
+
+        .summary {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 16px 18px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 14px rgba(24, 55, 90, 0.08);
+        }
+
+        .page-card {
+            display: block;
+            background: #ffffff;
+            color: #173f67;
+            text-decoration: none;
+            border-radius: 14px;
+            padding: 17px;
+            margin-bottom: 11px;
+            box-shadow: 0 3px 12px rgba(24, 55, 90, 0.07);
+        }
+
+        .page-card:hover {
+            background: #edf5fc;
+        }
+
+        .page-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .page-folder {
+            margin-top: 4px;
+            color: #68798a;
+            font-size: 14px;
+        }
+
+        .small {
+            color: #68798a;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-<h1>LINE HTML Notes</h1>
-<ul>
-<li><a href="university/halle-admission.html">Halle Wirtschaftsmathematik Admission</a></li>
-</ul>
+<div class="container">
+    <section class="hero">
+        <h1>LINE HTML Notes</h1>
+        <p>Master directory of published mobile guides</p>
+    </section>
+
+    <section class="summary">
+        <strong>Total published pages: 5</strong>
+        <div class="small">Index rebuilt: 2026-07-19 14:51</div>
+    </section>
+
+        <a class="page-card" href="travel/europe-summer-trip-2026.html">
+            <div class="page-title">Germany and Europe Summer Trip 2026</div>
+            <div class="page-folder">travel</div>
+        </a>
+        <a class="page-card" href="travel/halle-leipzig-day-trip-2026.html">
+            <div class="page-title">Halle to Leipzig Day Trip 2026</div>
+            <div class="page-folder">travel</div>
+        </a>
+        <a class="page-card" href="university/halle-admission.html">
+            <div class="page-title">Halle Wirtschaftsmathematik Admission</div>
+            <div class="page-folder">university</div>
+        </a>
+        <a class="page-card" href="university/m10-health-insurance-checklist.html">
+            <div class="page-title">M10 Health Insurance Guide</div>
+            <div class="page-folder">university</div>
+        </a>
+        <a class="page-card" href="university/wirtschaftsmathematik-university-career-guide.html">
+            <div class="page-title">Wirtschaftsmathematik: RWTH, KIT หรือ LMU</div>
+            <div class="page-folder">university</div>
+        </a>
+</div>
 </body>
 </html>
