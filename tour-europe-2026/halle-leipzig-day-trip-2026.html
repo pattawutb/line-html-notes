@@ -163,6 +163,44 @@
             }
         }
     </style>
+<style id="hotel-map-link-style">
+.hotel-map-card{
+  margin:18px 0;
+  padding:18px 20px;
+  border-radius:16px;
+  background:#f2f7fa;
+  border-left:6px solid #276493;
+  box-shadow:0 6px 18px rgba(25,65,95,.10);
+}
+
+.hotel-map-card h3{
+  margin:0 0 5px;
+  color:#18334d;
+}
+
+.hotel-map-card p{
+  margin:0;
+}
+
+.hotel-map-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:12px;
+  padding:10px 14px;
+  border-radius:12px;
+  background:#276493;
+  color:#fff !important;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 5px 15px rgba(25,65,95,.18);
+}
+
+.hotel-map-link:hover{
+  filter:brightness(.94);
+  transform:translateY(-1px);
+}
+</style>
 </head>
 <body>
 <div class="container">
@@ -218,6 +256,20 @@
         </ul>
 
         <h3>[STEP 2] เช้าวันเดินทาง</h3>
+<!-- HALLE_HOTEL_START -->
+<section class="hotel-map-card">
+  <h3>Hotel in Halle</h3>
+  <p><strong>B&B Hotel Halle (Saale)</strong></p>
+
+  <a class="hotel-map-link"
+     href="https://www.google.com/maps/search/?api=1&query=B%26B%20Hotel%20Halle%20%28Saale%29"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Open B and B Hotel Halle Saale in Google Maps">
+    Open hotel in Google Maps →
+  </a>
+</section>
+<!-- HALLE_HOTEL_END -->
         <ul>
             <li>ซื้อตั๋วในแอปก่อนขึ้นรถเที่ยวแรก</li>
             <li>ตรวจเวลาเริ่มใช้งานให้ถูกต้อง</li>
@@ -480,3 +532,4 @@
 </div>
 </body>
 </html>
+
