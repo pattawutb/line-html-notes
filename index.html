@@ -8,6 +8,7 @@
 
 <style>
 *{box-sizing:border-box}
+
 body{
 margin:0;
 background:#f2f5f8;
@@ -16,7 +17,13 @@ font-family:Arial,"Noto Sans Thai",sans-serif;
 font-size:17px;
 line-height:1.65
 }
-.container{max-width:920px;margin:auto;padding:20px 14px 55px}
+
+.container{
+max-width:920px;
+margin:auto;
+padding:20px 14px 55px
+}
+
 .hero{
 background:#174f83;
 color:white;
@@ -24,8 +31,14 @@ border-radius:20px;
 padding:27px 23px;
 margin-bottom:18px
 }
-.hero h1{margin:0 0 7px;font-size:30px}
+
+.hero h1{
+margin:0 0 7px;
+font-size:30px
+}
+
 .hero p{margin:4px 0}
+
 .summary{
 background:white;
 border-radius:16px;
@@ -33,13 +46,23 @@ padding:16px 19px;
 margin-bottom:18px;
 box-shadow:0 4px 14px rgba(25,56,87,.08)
 }
-.category{margin-bottom:24px}
-.category h2{margin:0 0 11px;color:#185b91;font-size:24px}
+
+.category{
+margin-bottom:24px
+}
+
+.category h2{
+margin:0 0 11px;
+color:#185b91;
+font-size:24px
+}
+
 .page-grid{
 display:grid;
 grid-template-columns:repeat(2,minmax(0,1fr));
 gap:11px
 }
+
 .page-card{
 display:block;
 background:white;
@@ -49,15 +72,89 @@ border-radius:15px;
 padding:16px;
 box-shadow:0 3px 12px rgba(24,55,90,.08)
 }
-.page-title{font-size:18px;font-weight:bold;line-height:1.45}
-.page-path{margin-top:6px;color:#758494;font-size:13px;overflow-wrap:anywhere}
-.small{color:#68798a;font-size:14px}
-.footer{text-align:center;color:#74818e;font-size:14px;padding-top:10px}
+
+.page-title{
+font-size:18px;
+font-weight:bold;
+line-height:1.45
+}
+
+.page-path{
+margin-top:6px;
+color:#758494;
+font-size:13px;
+overflow-wrap:anywhere
+}
+
+.master-card{
+grid-column:1/-1;
+background:#fff4d6;
+border:3px solid #c98600;
+padding:23px;
+box-shadow:0 6px 18px rgba(160,105,0,.18)
+}
+
+.master-card .page-title{
+font-size:25px;
+color:#754700
+}
+
+.master-label{
+display:inline-block;
+background:#a76200;
+color:white;
+border-radius:16px;
+padding:4px 11px;
+margin-bottom:9px;
+font-size:12px;
+font-weight:bold;
+letter-spacing:.7px
+}
+
+.master-description{
+margin-top:8px;
+color:#6d5735;
+font-size:15px
+}
+
+.small{
+color:#68798a;
+font-size:14px
+}
+
+.footer{
+text-align:center;
+color:#74818e;
+font-size:14px;
+padding-top:10px
+}
+
 @media(max-width:650px){
-body{font-size:16px}
-.hero h1{font-size:27px}
-.page-grid{grid-template-columns:1fr}
-.category h2{font-size:22px}
+
+body{
+font-size:16px
+}
+
+.hero h1{
+font-size:27px
+}
+
+.page-grid{
+grid-template-columns:1fr
+}
+
+.category h2{
+font-size:22px
+}
+
+.master-card{
+grid-column:auto
+}
+
+.master-card .page-title{
+font-size:22px
+}
+
 }
 </style>
 </head>
@@ -72,12 +169,20 @@ body{font-size:16px}
 
 <section class="summary">
 <strong>Total published pages: 11</strong>
-<div class="small">Index rebuilt: 2026-07-19 21:50</div>
+<div class="small">Index rebuilt: 2026-07-19 22:00</div>
 </section>
 
 <section class="category">
 <h2>Tour Europe 2026</h2>
 <div class="page-grid">
+<a class="page-card master-card" href="tour-europe-2026/europe-city-walk-2026.html">
+<div class="master-label">MASTER ITINERARY</div>
+<div class="page-title">Europe Summer 2026 — Master Itinerary</div>
+<div class="master-description">
+แผนหลักของทริปยุโรป 2026 — ตารางเมือง การเดินทาง โรงแรม และเส้นทาง Door-to-Door
+</div>
+<div class="page-path">tour-europe-2026/europe-city-walk-2026.html</div>
+</a>
 <a class="page-card" href="tour-europe-2026/amsterdam-base-2026.html">
 <div class="page-title">Amsterdam Base Guide 2026</div>
 <div class="page-path">tour-europe-2026/amsterdam-base-2026.html</div>
@@ -90,10 +195,6 @@ body{font-size:16px}
 <div class="page-title">Cologne Base Guide 2026 — Ruby Ella</div>
 <div class="page-path">tour-europe-2026/cologne-base-2026.html</div>
 </a>
-<a class="page-card" href="tour-europe-2026/europe-city-walk-2026.html">
-<div class="page-title">Europe City Walk 2026 — Door-to-Door Travel Guide</div>
-<div class="page-path">tour-europe-2026/europe-city-walk-2026.html</div>
-</a>
 <a class="page-card" href="tour-europe-2026/intercity-rail-guide.html">
 <div class="page-title">European Intercity Rail Guide</div>
 <div class="page-path">tour-europe-2026/intercity-rail-guide.html</div>
@@ -101,10 +202,6 @@ body{font-size:16px}
 <a class="page-card" href="tour-europe-2026/frankfurt-base-2026.html">
 <div class="page-title">Frankfurt Base Guide 2026 — City-Ost</div>
 <div class="page-path">tour-europe-2026/frankfurt-base-2026.html</div>
-</a>
-<a class="page-card" href="tour-europe-2026/germany-3-uni-tour-2026.html">
-<div class="page-title">Germany 3 Uni Tour 2026</div>
-<div class="page-path">tour-europe-2026/germany-3-uni-tour-2026.html</div>
 </a>
 <a class="page-card" href="tour-europe-2026/halle-leipzig-day-trip-2026.html">
 <div class="page-title">Halle to Leipzig Day Trip 2026</div>
@@ -115,6 +212,10 @@ body{font-size:16px}
 <section class="category">
 <h2>Wirtschaftsmathematik</h2>
 <div class="page-grid">
+<a class="page-card" href="wirtschaftsmathematik/germany-3-uni-tour-2026.html">
+<div class="page-title">Germany 3 Uni Tour 2026</div>
+<div class="page-path">wirtschaftsmathematik/germany-3-uni-tour-2026.html</div>
+</a>
 <a class="page-card" href="wirtschaftsmathematik/halle-admission.html">
 <div class="page-title">Halle Wirtschaftsmathematik Admission</div>
 <div class="page-path">wirtschaftsmathematik/halle-admission.html</div>
