@@ -1,160 +1,182 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PunPoon Notes</title>
 
 <style>
-*{box-sizing:border-box}
-
-body{
-margin:0;
-background:#f2f5f8;
-color:#243142;
-font-family:Arial,"Noto Sans Thai",sans-serif;
-font-size:17px;
-line-height:1.65
+:root {
+  --navy: #17263c;
+  --blue: #275f91;
+  --gold: #c99738;
+  --cream: #fff8e8;
+  --paper: #f3f1ec;
+  --white: #ffffff;
+  --ink: #26313d;
+  --muted: #68737e;
+  --shadow: 0 8px 25px rgba(23,38,60,.10);
 }
 
-.container{
-max-width:920px;
-margin:auto;
-padding:20px 14px 55px
+* {
+  box-sizing: border-box;
 }
 
-.hero{
-background:#174f83;
-color:white;
-border-radius:20px;
-padding:27px 23px;
-margin-bottom:18px
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, "Segoe UI", sans-serif;
+  line-height: 1.6;
 }
 
-.hero h1{
-margin:0 0 7px;
-font-size:30px
+.container {
+  max-width: 1080px;
+  margin: auto;
+  padding: 24px 16px 60px;
 }
 
-.hero p{margin:4px 0}
-
-.summary{
-background:white;
-border-radius:16px;
-padding:16px 19px;
-margin-bottom:18px;
-box-shadow:0 4px 14px rgba(25,56,87,.08)
+.hero {
+  padding: 42px 30px;
+  border-radius: 25px;
+  color: white;
+  background:
+    linear-gradient(110deg, rgba(20,37,59,.97), rgba(46,81,113,.82)),
+    linear-gradient(145deg, #243c5a, #83626b);
+  box-shadow: var(--shadow);
 }
 
-.category{
-margin-bottom:24px
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 44px;
 }
 
-.category h2{
-margin:0 0 11px;
-color:#185b91;
-font-size:24px
+.hero p {
+  margin: 0;
+  color: #edf2f6;
+  font-size: 18px;
 }
 
-.page-grid{
-display:grid;
-grid-template-columns:repeat(2,minmax(0,1fr));
-gap:11px
+.stats {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #fff2c8;
 }
 
-.page-card{
-display:block;
-background:white;
-color:#173f67;
-text-decoration:none;
-border-radius:15px;
-padding:16px;
-box-shadow:0 3px 12px rgba(24,55,90,.08)
+section {
+  margin-top: 34px;
 }
 
-.page-title{
-font-size:18px;
-font-weight:bold;
-line-height:1.45
+h2 {
+  margin-bottom: 14px;
+  color: var(--navy);
+  font-size: 29px;
 }
 
-.page-path{
-margin-top:6px;
-color:#758494;
-font-size:13px;
-overflow-wrap:anywhere
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
 }
 
-.master-card{
-grid-column:1/-1;
-background:#fff4d6;
-border:3px solid #c98600;
-padding:23px;
-box-shadow:0 6px 18px rgba(160,105,0,.18)
+.card {
+  display: block;
+  min-height: 165px;
+  padding: 21px;
+  border-radius: 17px;
+  background: white;
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  border: 1px solid transparent;
+  transition: transform .15s ease, border-color .15s ease;
 }
 
-.master-card .page-title{
-font-size:25px;
-color:#754700
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #b8cad8;
 }
 
-.master-label{
-display:inline-block;
-background:#a76200;
-color:white;
-border-radius:16px;
-padding:4px 11px;
-margin-bottom:9px;
-font-size:12px;
-font-weight:bold;
-letter-spacing:.7px
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 21px;
+  line-height: 1.3;
 }
 
-.master-description{
-margin-top:8px;
-color:#6d5735;
-font-size:15px
+.card p {
+  margin: 0;
+  color: var(--muted);
 }
 
-.small{
-color:#68798a;
-font-size:14px
+.card small {
+  display: block;
+  margin-top: 12px;
+  color: #7b8791;
 }
 
-.footer{
-text-align:center;
-color:#74818e;
-font-size:14px;
-padding-top:10px
+.master {
+  grid-column: 1 / -1;
+  min-height: 185px;
+  border: 2px solid var(--gold);
+  background:
+    linear-gradient(105deg, rgba(255,248,225,.98), rgba(255,255,255,.97));
 }
 
-@media(max-width:650px){
-
-body{
-font-size:16px
+.master h3 {
+  color: #73500f;
+  font-size: 27px;
 }
 
-.hero h1{
-font-size:27px
+.paris {
+  grid-column: span 2;
+  border: 2px solid #a95560;
+  background:
+    linear-gradient(110deg, rgba(255,245,241,.98), rgba(255,255,255,.98));
 }
 
-.page-grid{
-grid-template-columns:1fr
+.paris h3 {
+  color: #943d4a;
+  font-size: 25px;
 }
 
-.category h2{
-font-size:22px
+.badge {
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.master-card{
-grid-column:auto
+.badge.paris-badge {
+  background: #a74a54;
 }
 
-.master-card .page-title{
-font-size:22px
+footer {
+  margin-top: 42px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
 }
 
+@media (max-width: 780px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .master,
+  .paris {
+    grid-column: auto;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
 }
 </style>
 </head>
@@ -162,78 +184,117 @@ font-size:22px
 <body>
 <div class="container">
 
-<section class="hero">
-<h1>PunPoon Notes</h1>
-<p>Organized guides, project notes and learning pages</p>
+<header class="hero">
+  <h1>PunPoon Notes</h1>
+  <p>Organized guides, project notes and learning pages</p>
+  <div class="stats">
+    Total published pages: 12<br>
+    Index rebuilt: 2026-07-19
+  </div>
+</header>
+
+<section>
+  <h2>Tour Europe 2026</h2>
+
+  <div class="grid">
+
+    <a class="card master"
+       href="tour-europe-2026/europe-city-walk-2026.html">
+      <span class="badge">MASTER ITINERARY</span>
+      <h3>Europe Summer 2026 — Master Itinerary</h3>
+      <p>
+        แผนหลักของทริปยุโรป 2026 — ตารางเมือง การเดินทาง
+        โรงแรม และเส้นทาง Door-to-Door
+      </p>
+      <small>tour-europe-2026/europe-city-walk-2026.html</small>
+    </a>
+
+    <a class="card paris"
+       href="tour-europe-2026/paris-master-city-guide-2026.html">
+      <span class="badge paris-badge">HERO CITY</span>
+      <h3>Paris Master City Guide 2026</h3>
+      <p>
+        Paris 6–11 August 2026 — Hampton Saint-Ouen,
+        daily Door-to-Door routes, Métro plan, Versailles
+        and recommended transport tickets.
+      </p>
+      <small>tour-europe-2026/paris-master-city-guide-2026.html</small>
+    </a>
+
+    <a class="card"
+       href="tour-europe-2026/amsterdam-base-2026.html">
+      <h3>Amsterdam Base Guide 2026</h3>
+      <small>tour-europe-2026/amsterdam-base-2026.html</small>
+    </a>
+
+    <a class="card"
+       href="tour-europe-2026/brussels-base-2026.html">
+      <h3>Brussels Base Guide 2026</h3>
+      <small>tour-europe-2026/brussels-base-2026.html</small>
+    </a>
+
+    <a class="card"
+       href="tour-europe-2026/cologne-base-2026.html">
+      <h3>Cologne Base Guide 2026 — Ruby Ella</h3>
+      <small>tour-europe-2026/cologne-base-2026.html</small>
+    </a>
+
+    <a class="card"
+       href="tour-europe-2026/frankfurt-base-2026.html">
+      <h3>Frankfurt Base Guide 2026 — City-Ost</h3>
+      <small>tour-europe-2026/frankfurt-base-2026.html</small>
+    </a>
+
+    <a class="card"
+       href="tour-europe-2026/halle-leipzig-day-trip-2026.html">
+      <h3>Halle to Leipzig Day Trip 2026</h3>
+      <small>tour-europe-2026/halle-leipzig-day-trip-2026.html</small>
+    </a>
+
+    <a class="card"
+       href="tour-europe-2026/intercity-rail-guide.html">
+      <h3>European Intercity Rail Guide</h3>
+      <small>tour-europe-2026/intercity-rail-guide.html</small>
+    </a>
+
+  </div>
 </section>
 
-<section class="summary">
-<strong>Total published pages: 11</strong>
-<div class="small">Index rebuilt: 2026-07-19 22:00</div>
+<section>
+  <h2>Wirtschaftsmathematik</h2>
+
+  <div class="grid">
+
+    <a class="card"
+       href="wirtschaftsmathematik/germany-3-uni-tour-2026.html">
+      <h3>Germany 3 Uni Tour 2026</h3>
+      <small>wirtschaftsmathematik/germany-3-uni-tour-2026.html</small>
+    </a>
+
+    <a class="card"
+       href="wirtschaftsmathematik/halle-admission.html">
+      <h3>Halle Wirtschaftsmathematik Admission</h3>
+      <small>wirtschaftsmathematik/halle-admission.html</small>
+    </a>
+
+    <a class="card"
+       href="wirtschaftsmathematik/m10-health-insurance-checklist.html">
+      <h3>M10 Health Insurance Guide</h3>
+      <small>wirtschaftsmathematik/m10-health-insurance-checklist.html</small>
+    </a>
+
+    <a class="card"
+       href="wirtschaftsmathematik/wirtschaftsmathematik-university-career-guide.html">
+      <h3>Wirtschaftsmathematik: RWTH, KIT หรือ LMU</h3>
+      <small>wirtschaftsmathematik/wirtschaftsmathematik-university-career-guide.html</small>
+    </a>
+
+  </div>
 </section>
 
-<section class="category">
-<h2>Tour Europe 2026</h2>
-<div class="page-grid">
-<a class="page-card master-card" href="tour-europe-2026/europe-city-walk-2026.html">
-<div class="master-label">MASTER ITINERARY</div>
-<div class="page-title">Europe Summer 2026 — Master Itinerary</div>
-<div class="master-description">
-แผนหลักของทริปยุโรป 2026 — ตารางเมือง การเดินทาง โรงแรม และเส้นทาง Door-to-Door
-</div>
-<div class="page-path">tour-europe-2026/europe-city-walk-2026.html</div>
-</a>
-<a class="page-card" href="tour-europe-2026/amsterdam-base-2026.html">
-<div class="page-title">Amsterdam Base Guide 2026</div>
-<div class="page-path">tour-europe-2026/amsterdam-base-2026.html</div>
-</a>
-<a class="page-card" href="tour-europe-2026/brussels-base-2026.html">
-<div class="page-title">Brussels Base Guide 2026</div>
-<div class="page-path">tour-europe-2026/brussels-base-2026.html</div>
-</a>
-<a class="page-card" href="tour-europe-2026/cologne-base-2026.html">
-<div class="page-title">Cologne Base Guide 2026 — Ruby Ella</div>
-<div class="page-path">tour-europe-2026/cologne-base-2026.html</div>
-</a>
-<a class="page-card" href="tour-europe-2026/intercity-rail-guide.html">
-<div class="page-title">European Intercity Rail Guide</div>
-<div class="page-path">tour-europe-2026/intercity-rail-guide.html</div>
-</a>
-<a class="page-card" href="tour-europe-2026/frankfurt-base-2026.html">
-<div class="page-title">Frankfurt Base Guide 2026 — City-Ost</div>
-<div class="page-path">tour-europe-2026/frankfurt-base-2026.html</div>
-</a>
-<a class="page-card" href="tour-europe-2026/halle-leipzig-day-trip-2026.html">
-<div class="page-title">Halle to Leipzig Day Trip 2026</div>
-<div class="page-path">tour-europe-2026/halle-leipzig-day-trip-2026.html</div>
-</a>
-</div>
-</section>
-<section class="category">
-<h2>Wirtschaftsmathematik</h2>
-<div class="page-grid">
-<a class="page-card" href="wirtschaftsmathematik/germany-3-uni-tour-2026.html">
-<div class="page-title">Germany 3 Uni Tour 2026</div>
-<div class="page-path">wirtschaftsmathematik/germany-3-uni-tour-2026.html</div>
-</a>
-<a class="page-card" href="wirtschaftsmathematik/halle-admission.html">
-<div class="page-title">Halle Wirtschaftsmathematik Admission</div>
-<div class="page-path">wirtschaftsmathematik/halle-admission.html</div>
-</a>
-<a class="page-card" href="wirtschaftsmathematik/m10-health-insurance-checklist.html">
-<div class="page-title">M10 Health Insurance Guide</div>
-<div class="page-path">wirtschaftsmathematik/m10-health-insurance-checklist.html</div>
-</a>
-<a class="page-card" href="wirtschaftsmathematik/wirtschaftsmathematik-university-career-guide.html">
-<div class="page-title">Wirtschaftsmathematik: RWTH, KIT หรือ LMU</div>
-<div class="page-path">wirtschaftsmathematik/wirtschaftsmathematik-university-career-guide.html</div>
-</a>
-</div>
-</section>
-
-<div class="footer">
-PunPoon Notes
-</div>
+<footer>
+  PunPoon Notes
+</footer>
 
 </div>
 </body>
