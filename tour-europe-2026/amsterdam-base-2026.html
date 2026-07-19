@@ -206,6 +206,25 @@ table{font-size:14px}
 th,td{padding:8px 5px}
 }
 </style>
+<style id="hotel-map-link-style">
+.hotel-map-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:10px;
+  padding:10px 14px;
+  border-radius:12px;
+  background:#276493;
+  color:#fff !important;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 5px 15px rgba(25,65,95,.18);
+}
+.hotel-map-link:hover{
+  filter:brightness(.94);
+  transform:translateY(-1px);
+}
+</style>
 </head>
 
 <body>
@@ -214,7 +233,18 @@ th,td{padding:8px 5px}
 <section class="hero">
 <h1>Amsterdam Base Guide 2026</h1>
 <p>1–4 August 2026 · 3 nights</p>
-<p>Park Inn by Radisson Amsterdam City West</p>
+<p>Park Inn by Radisson Amsterdam City West
+<!-- HOTEL_MAP_LINK_START -->
+<div class="hotel-map-block">
+  <a class="hotel-map-link"
+     href="https://www.google.com/maps/search/?api=1&query=Park%20Inn%20by%20Radisson%20Amsterdam%20City%20West"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Open Park Inn by Radisson Amsterdam City West in Google Maps">
+    📍 Open hotel in Google Maps
+  </a>
+</div>
+<!-- HOTEL_MAP_LINK_END --></p>
 <p>Canals · Jordaan · Rijksmuseum · Zaanse Schans · De Pijp</p>
 </section>
 
@@ -724,3 +754,4 @@ Amsterdam Base Guide 2026 · Tour Europe 2026
 </div>
 </body>
 </html>
+

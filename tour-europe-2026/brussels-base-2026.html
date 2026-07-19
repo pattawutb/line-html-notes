@@ -182,6 +182,25 @@ table{font-size:14px}
 th,td{padding:8px 5px}
 }
 </style>
+<style id="hotel-map-link-style">
+.hotel-map-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:10px;
+  padding:10px 14px;
+  border-radius:12px;
+  background:#276493;
+  color:#fff !important;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 5px 15px rgba(25,65,95,.18);
+}
+.hotel-map-link:hover{
+  filter:brightness(.94);
+  transform:translateY(-1px);
+}
+</style>
 </head>
 
 <body>
@@ -223,7 +242,18 @@ th,td{padding:8px 5px}
 </section>
 
 <section class="card">
-<h2>ฐานที่พัก — The Liman Hotel</h2>
+<h2>ฐานที่พัก — The Liman Hotel
+<!-- HOTEL_MAP_LINK_START -->
+<div class="hotel-map-block">
+  <a class="hotel-map-link"
+     href="https://www.google.com/maps/search/?api=1&query=%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%B1%E0%B8%81%20%E2%80%94%20The%20Liman%20Hotel"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Open ฐานที่พัก — The Liman Hotel in Google Maps">
+    📍 Open hotel in Google Maps
+  </a>
+</div>
+<!-- HOTEL_MAP_LINK_END --></h2>
 
 <table>
 <tr>
@@ -623,3 +653,4 @@ Brussels Base Guide 2026 · PunPoon Notes
 </div>
 </body>
 </html>
+

@@ -7,6 +7,25 @@
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f3f6f8;color:#263442;font-family:Arial,"Noto Sans Thai",sans-serif;font-size:17px;line-height:1.72}.container{max-width:900px;margin:auto;padding:18px 14px 55px}.hero{background:linear-gradient(135deg,#174b79,#287bad);color:white;border-radius:20px;padding:28px 23px;margin-bottom:16px}.hero h1{margin:0 0 7px;font-size:30px;line-height:1.3}.hero p{margin:5px 0}.card{background:white;border-radius:17px;padding:21px;margin-bottom:16px;box-shadow:0 4px 15px rgba(25,56,87,.08)}.blue{background:#eaf4fc;border-left:6px solid #2677ad}.green{background:#eef8f1;border-left:6px solid #3e8b59}.orange{background:#fff6e8;border-left:6px solid #d98b24}.purple{background:#f6f0fc;border-left:6px solid #865cae}h2{margin:0 0 13px;color:#175b90;font-size:24px;line-height:1.4}h3{margin:18px 0 7px;color:#274f70;font-size:20px}p{margin:7px 0 12px}ul{margin:7px 0 12px;padding-left:23px}li{margin-bottom:7px}.date{display:inline-block;background:#175b90;color:white;border-radius:20px;padding:4px 12px;margin-bottom:7px;font-weight:bold}.route{background:#eef5fa;border-radius:13px;padding:15px;margin:11px 0;color:#214d70;font-weight:bold}.transport{background:#f0f7f2;border-radius:13px;padding:15px;margin:11px 0}.food{background:#fff7e9;border-radius:13px;padding:15px;margin:11px 0}.walk{border-left:5px solid #8fb9da;padding:3px 0 18px 17px;margin:8px 0 8px 5px}.stop{font-size:19px;font-weight:bold;color:#234f73}.time{display:inline-block;background:#e3eef7;color:#245271;border-radius:17px;padding:2px 9px;margin-right:5px;font-size:14px;font-weight:bold}.price{color:#1e7344;font-weight:bold}.warning{color:#9c521a;font-weight:bold}.small{font-size:14px;color:#687887}.maplink{display:inline-block;background:#17679d;color:white;text-decoration:none;border-radius:19px;padding:7px 13px;margin:4px 5px 4px 0;font-size:14px;font-weight:bold}table{width:100%;border-collapse:collapse;margin:11px 0}th,td{padding:10px 8px;border-bottom:1px solid #dde5eb;text-align:left;vertical-align:top}th{background:#edf3f7;color:#274c69}a{color:#17689d;overflow-wrap:anywhere}.footer{text-align:center;color:#697887;font-size:14px;padding-top:8px}@media(max-width:580px){body{font-size:16px}.hero h1{font-size:26px}.card{padding:18px}table{font-size:14px}th,td{padding:8px 5px}}
 </style>
+<style id="hotel-map-link-style">
+.hotel-map-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:10px;
+  padding:10px 14px;
+  border-radius:12px;
+  background:#276493;
+  color:#fff !important;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 5px 15px rgba(25,65,95,.18);
+}
+.hotel-map-link:hover{
+  filter:brightness(.94);
+  transform:translateY(-1px);
+}
+</style>
 </head>
 
 <body>
@@ -34,7 +53,18 @@
 </section>
 
 <section class="card">
-<h2>28 July — Halle → Frankfurt แบบ Hotel Door-to-Door</h2>
+<h2>28 July — Halle → Frankfurt แบบ Hotel Door-to-Door
+<!-- HOTEL_MAP_LINK_START -->
+<div class="hotel-map-block">
+  <a class="hotel-map-link"
+     href="https://www.google.com/maps/search/?api=1&query=28%20July%20%E2%80%94%20Halle%20%E2%86%92%20Frankfurt%20%E0%B9%81%E0%B8%9A%E0%B8%9A%20Hotel%20Door-to-Door"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Open 28 July — Halle → Frankfurt แบบ Hotel Door-to-Door in Google Maps">
+    📍 Open hotel in Google Maps
+  </a>
+</div>
+<!-- HOTEL_MAP_LINK_END --></h2>
 <div class="route">B&amp;B HOTEL Halle → Hallmarkt → Halle (Saale) Hbf → Frankfurt (Main) Hbf → Tram 11 → B&amp;B HOTEL Frankfurt City-Ost</div>
 
 <h3>ช่วงที่ 1: โรงแรม Halle → Halle Hbf</h3>
@@ -250,3 +280,4 @@
 </div>
 </body>
 </html>
+
