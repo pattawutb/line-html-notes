@@ -1,0 +1,15 @@
+
+FullName
+--------
+C:\Users\ThinkPad\Documents\line-html-notes\folder-restructure-backup-20260719-210846.txt
+C:\Users\ThinkPad\Documents\line-html-notes\index.html
+C:\Users\ThinkPad\Documents\line-html-notes\travel\cologne-base-2026.html
+C:\Users\ThinkPad\Documents\line-html-notes\travel\europe-city-walk-2026.html
+C:\Users\ThinkPad\Documents\line-html-notes\travel\europe-summer-trip-2026.html
+C:\Users\ThinkPad\Documents\line-html-notes\travel\frankfurt-base-2026.html
+C:\Users\ThinkPad\Documents\line-html-notes\travel\germany-3-uni-tour-2026.html
+C:\Users\ThinkPad\Documents\line-html-notes\travel\halle-leipzig-day-trip-2026.html
+C:\Users\ThinkPad\Documents\line-html-notes\university\halle-admission.html
+C:\Users\ThinkPad\Documents\line-html-notes\university\m10-health-insurance-checklist.html
+C:\Users\ThinkPad\Documents\line-html-notes\university\wirtschaftsmathematik-university-career-guide.html
+

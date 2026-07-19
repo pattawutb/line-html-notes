@@ -6,31 +6,57 @@
 <title>LINE HTML Notes</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f3f6fa;color:#243142;font-family:Arial,"Noto Sans Thai",sans-serif;line-height:1.6}
-.container{max-width:780px;margin:auto;padding:20px 14px 48px}
-.hero{background:#165a9f;color:white;border-radius:18px;padding:24px 20px;margin-bottom:16px}
-.hero h1{margin:0 0 8px;font-size:29px}
-.summary{background:white;border-radius:15px;padding:16px 18px;margin-bottom:15px;box-shadow:0 3px 14px rgba(24,55,90,.08)}
-.page-card{display:block;background:white;color:#173f67;text-decoration:none;border-radius:14px;padding:17px;margin-bottom:11px;box-shadow:0 3px 12px rgba(24,55,90,.07)}
-.page-card:hover{background:#edf5fc}
-.page-title{font-size:18px;font-weight:bold}
-.page-folder{margin-top:4px;color:#68798a;font-size:14px}
+body{margin:0;background:#f2f5f8;color:#243142;font-family:Arial,"Noto Sans Thai",sans-serif;font-size:17px;line-height:1.65}
+.container{max-width:920px;margin:auto;padding:20px 14px 55px}
+.hero{background:linear-gradient(135deg,#174f83,#287caf);color:white;border-radius:20px;padding:27px 23px;margin-bottom:18px}
+.hero h1{margin:0 0 7px;font-size:30px}
+.hero p{margin:4px 0}
+.summary{background:white;border-radius:16px;padding:16px 19px;margin-bottom:18px;box-shadow:0 4px 14px rgba(25,56,87,.08)}
+.category{margin-bottom:24px}
+.category h2{margin:0 0 11px;color:#185b91;font-size:24px}
+.page-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.page-card{display:block;background:white;color:#173f67;text-decoration:none;border-radius:15px;padding:16px;box-shadow:0 3px 12px rgba(24,55,90,.08);transition:transform .15s ease,background .15s ease}
+.page-card:hover{background:#edf5fc;transform:translateY(-1px)}
+.page-title{font-size:18px;font-weight:bold;line-height:1.45}
+.page-path{margin-top:6px;color:#758494;font-size:13px;overflow-wrap:anywhere}
 .small{color:#68798a;font-size:14px}
+.footer{text-align:center;color:#74818e;font-size:14px;padding-top:10px}
+@media(max-width:650px){body{font-size:16px}.hero h1{font-size:27px}.page-grid{grid-template-columns:1fr}.category h2{font-size:22px}}
 </style>
 </head>
 <body>
 <div class="container">
-<section class="hero"><h1>LINE HTML Notes</h1><p>Master directory of published mobile guides</p></section>
-<section class="summary"><strong>Total published pages: 9</strong><div class="small">Index rebuilt: 2026-07-19 21:05</div></section>
-<a class="page-card" href="travel/cologne-base-2026.html"><div class="page-title">Cologne Base Guide 2026 — Ruby Ella</div><div class="page-folder">travel</div></a>
-<a class="page-card" href="travel/europe-city-walk-2026.html"><div class="page-title">Europe City Walk 2026 — Door-to-Door Travel Guide</div><div class="page-folder">travel</div></a>
-<a class="page-card" href="travel/frankfurt-base-2026.html"><div class="page-title">Frankfurt Base Guide 2026 — City-Ost</div><div class="page-folder">travel</div></a>
-<a class="page-card" href="travel/germany-3-uni-tour-2026.html"><div class="page-title">Germany 3 Uni Tour 2026</div><div class="page-folder">travel</div></a>
-<a class="page-card" href="travel/europe-summer-trip-2026.html"><div class="page-title">Germany and Europe Summer Trip 2026</div><div class="page-folder">travel</div></a>
-<a class="page-card" href="travel/halle-leipzig-day-trip-2026.html"><div class="page-title">Halle to Leipzig Day Trip 2026</div><div class="page-folder">travel</div></a>
-<a class="page-card" href="university/halle-admission.html"><div class="page-title">Halle Wirtschaftsmathematik Admission</div><div class="page-folder">university</div></a>
-<a class="page-card" href="university/m10-health-insurance-checklist.html"><div class="page-title">M10 Health Insurance Guide</div><div class="page-folder">university</div></a>
-<a class="page-card" href="university/wirtschaftsmathematik-university-career-guide.html"><div class="page-title">Wirtschaftsmathematik: RWTH, KIT หรือ LMU</div><div class="page-folder">university</div></a>
+<section class="hero">
+<h1>LINE HTML Notes</h1>
+<p>Organized guides, project notes and learning pages</p>
+</section>
+
+<section class="summary">
+<strong>Total published pages: 9</strong>
+<div class="small">Index rebuilt: 2026-07-19 21:08</div>
+</section>
+
+<section class="category">
+<h2>Tour Europe 2026</h2>
+<div class="page-grid">
+<a class="page-card" href="tour-europe-2026/cologne-base-2026.html"><div class="page-title">Cologne Base Guide 2026 — Ruby Ella</div><div class="page-path">tour-europe-2026/cologne-base-2026.html</div></a>
+<a class="page-card" href="tour-europe-2026/europe-city-walk-2026.html"><div class="page-title">Europe City Walk 2026 — Door-to-Door Travel Guide</div><div class="page-path">tour-europe-2026/europe-city-walk-2026.html</div></a>
+<a class="page-card" href="tour-europe-2026/frankfurt-base-2026.html"><div class="page-title">Frankfurt Base Guide 2026 — City-Ost</div><div class="page-path">tour-europe-2026/frankfurt-base-2026.html</div></a>
+<a class="page-card" href="tour-europe-2026/germany-3-uni-tour-2026.html"><div class="page-title">Germany 3 Uni Tour 2026</div><div class="page-path">tour-europe-2026/germany-3-uni-tour-2026.html</div></a>
+<a class="page-card" href="tour-europe-2026/europe-summer-trip-2026.html"><div class="page-title">Germany and Europe Summer Trip 2026</div><div class="page-path">tour-europe-2026/europe-summer-trip-2026.html</div></a>
+<a class="page-card" href="tour-europe-2026/halle-leipzig-day-trip-2026.html"><div class="page-title">Halle to Leipzig Day Trip 2026</div><div class="page-path">tour-europe-2026/halle-leipzig-day-trip-2026.html</div></a>
+<a class="page-card" href="tour-europe-2026/halle-admission.html"><div class="page-title">Halle Wirtschaftsmathematik Admission</div><div class="page-path">tour-europe-2026/halle-admission.html</div></a>
+</div>
+</section>
+<section class="category">
+<h2>Wirtschaftsmathematik</h2>
+<div class="page-grid">
+<a class="page-card" href="wirtschaftsmathematik/m10-health-insurance-checklist.html"><div class="page-title">M10 Health Insurance Guide</div><div class="page-path">wirtschaftsmathematik/m10-health-insurance-checklist.html</div></a>
+<a class="page-card" href="wirtschaftsmathematik/wirtschaftsmathematik-university-career-guide.html"><div class="page-title">Wirtschaftsmathematik: RWTH, KIT หรือ LMU</div><div class="page-path">wirtschaftsmathematik/wirtschaftsmathematik-university-career-guide.html</div></a>
+</div>
+</section>
+
+<div class="footer">Pattawut's HTML Knowledge Library</div>
 </div>
 </body>
 </html>
