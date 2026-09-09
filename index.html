@@ -1,451 +1,64 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Europe Summer 2026 Journey — PunPoon Notes</title>
-<meta name="description" content="Europe Summer 2026 trip route: Halle, Frankfurt, Köln, Amsterdam, Brussels, Paris, Frankfurt and Berlin.">
+<title>LINE HTML Notes</title>
 <style>
-:root{
-  --ink:#182333;
-  --muted:#6e7885;
-  --paper:#f4f1eb;
-  --white:#ffffff;
-  --navy:#15263e;
-  --blue:#326c99;
-  --gold:#c99436;
-  --rose:#a84453;
-  --rose-dark:#7e2c39;
-  --green:#397461;
-  --line:#d8dde2;
-  --shadow:0 12px 34px rgba(21,38,62,.11);
+body {
+    margin: 0;
+    background: #f4f7fb;
+    color: #1f2937;
+    font-family: Arial, sans-serif;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:
-    radial-gradient(circle at 90% 5%,rgba(201,148,54,.13),transparent 24%),
-    var(--paper);
-  color:var(--ink);
-  font-family:Arial,"Noto Sans Thai","Segoe UI",sans-serif;
-  line-height:1.65;
+.container {
+    max-width: 760px;
+    margin: auto;
+    padding: 18px;
 }
-a{color:inherit}
-.wrap{max-width:1160px;margin:auto;padding:18px 16px 64px}
-.hero{
-  min-height:390px;
-  padding:42px 38px;
-  border-radius:30px;
-  display:flex;
-  align-items:flex-end;
-  position:relative;
-  overflow:hidden;
-  color:#fff;
-  background:
-    linear-gradient(110deg,rgba(11,26,47,.98),rgba(42,75,108,.78)),
-    radial-gradient(circle at 76% 18%,rgba(255,215,135,.62),transparent 27%),
-    linear-gradient(145deg,#203d60,#8a5863);
-  box-shadow:var(--shadow);
+h1 { color: #174ea6; }
+.summary {
+    background: white;
+    padding: 16px;
+    border-radius: 14px;
+    margin-bottom: 16px;
 }
-.hero:after{
-  content:"EUROPE";
-  position:absolute;
-  right:-18px;
-  top:-42px;
-  font-size:142px;
-  font-weight:900;
-  letter-spacing:8px;
-  color:rgba(255,255,255,.055);
+.item {
+    background: white;
+    padding: 14px 16px;
+    margin: 10px 0;
+    border-radius: 12px;
 }
-.eyebrow{
-  display:inline-block;
-  padding:6px 12px;
-  border:1px solid rgba(255,255,255,.6);
-  border-radius:999px;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:1.4px;
+.folder {
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 5px;
 }
-.hero h1{font-size:48px;line-height:1.08;margin:15px 0 10px;max-width:780px}
-.hero p{font-size:19px;max-width:780px;margin:0;color:#edf1f5}
-.hero-stats{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:19px;
-}
-.hero-stats span{
-  padding:8px 12px;
-  border-radius:12px;
-  background:rgba(255,255,255,.13);
-  border:1px solid rgba(255,255,255,.18);
-  font-weight:700;
-}
-.top-actions{
-  display:grid;
-  grid-template-columns:1.35fr .65fr;
-  gap:14px;
-  margin:18px 0 34px;
-}
-.action{
-  display:block;
-  text-decoration:none;
-  background:var(--white);
-  border-radius:19px;
-  padding:21px 23px;
-  box-shadow:var(--shadow);
-  border:1px solid transparent;
-}
-.action:hover{border-color:#afc3d3;transform:translateY(-2px)}
-.action strong{display:block;color:var(--navy);font-size:22px}
-.action span{color:var(--muted)}
-.action.master{border-left:7px solid var(--gold)}
-.action.rail{border-left:7px solid var(--blue)}
-.section-title{margin:42px 0 8px;color:var(--navy);font-size:32px}
-.section-lead{color:var(--muted);margin:0 0 22px;font-size:18px}
-.route-strip{
-  display:flex;
-  overflow:auto;
-  gap:0;
-  align-items:center;
-  background:#fff;
-  border-radius:18px;
-  padding:15px 13px;
-  box-shadow:var(--shadow);
-  margin-bottom:27px;
-}
-.route-strip span{
-  white-space:nowrap;
-  font-weight:800;
-  color:var(--navy);
-  padding:8px 10px;
-}
-.route-strip i{font-style:normal;color:var(--gold);font-weight:900}
-.journey{
-  position:relative;
-  margin-left:20px;
-}
-.journey:before{
-  content:"";
-  position:absolute;
-  left:35px;
-  top:30px;
-  bottom:30px;
-  width:4px;
-  border-radius:10px;
-  background:linear-gradient(var(--blue),var(--gold),var(--rose),var(--navy));
-}
-.stop{
-  position:relative;
-  display:grid;
-  grid-template-columns:72px 1fr;
-  gap:18px;
-  margin:0 0 20px;
-}
-.node{
-  width:72px;height:72px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  position:relative;z-index:2;
-  color:#fff;font-size:25px;font-weight:900;
-  background:var(--blue);
-  border:7px solid var(--paper);
-  box-shadow:0 4px 14px rgba(21,38,62,.14);
-}
-.city-card{
-  display:block;
-  text-decoration:none;
-  border-radius:21px;
-  background:#fff;
-  padding:20px 22px;
-  box-shadow:var(--shadow);
-  border:1px solid transparent;
-  position:relative;
-  overflow:hidden;
-}
-.city-card:hover{border-color:#b8c8d4;transform:translateY(-2px)}
-.city-card h3{font-size:27px;line-height:1.1;margin:3px 0 8px;color:var(--navy)}
-.meta{font-size:14px;color:var(--blue);font-weight:800;letter-spacing:.4px}
-.city-card p{margin:5px 0;color:#4d5965}
-.tags{margin-top:12px}
-.tag{
-  display:inline-block;
-  margin:3px 4px 0 0;
-  padding:4px 9px;
-  border-radius:999px;
-  background:#edf3f7;
-  color:#315b79;
-  font-size:12px;
-  font-weight:800;
-}
-.arrow-link{
-  position:absolute;
-  right:20px;
-  top:20px;
-  width:36px;height:36px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  background:#edf3f7;color:var(--blue);font-weight:900;
-}
-.stop.paris{margin:28px 0 30px}
-.stop.paris .node{
-  width:82px;height:82px;
-  margin-left:-5px;
-  background:var(--rose);
-  font-size:29px;
-}
-.stop.paris .city-card{
-  min-height:250px;
-  padding:28px 29px;
-  color:#fff;
-  border:none;
-  background:
-    linear-gradient(105deg,rgba(116,29,43,.98),rgba(174,65,79,.90)),
-    radial-gradient(circle at 83% 16%,rgba(255,222,151,.55),transparent 25%);
-}
-.stop.paris .city-card:after{
-  content:"PARIS";
-  position:absolute;
-  right:-8px;bottom:-38px;
-  font-size:102px;font-weight:900;letter-spacing:5px;
-  color:rgba(255,255,255,.07);
-}
-.stop.paris .city-card h3{font-size:39px;color:#fff}
-.stop.paris .city-card p,.stop.paris .meta{color:#fff5f0}
-.stop.paris .tag{background:rgba(255,255,255,.16);color:#fff}
-.stop.paris .arrow-link{background:#fff;color:var(--rose)}
-.hero-label{
-  display:inline-block;
-  padding:5px 10px;
-  background:#ffd981;
-  color:#633513;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:1px;
-  margin-bottom:8px;
-}
-.return .node{background:var(--gold)}
-.final .node{background:var(--navy)}
-.unlinked{cursor:default}
-.unlinked:hover{transform:none;border-color:transparent}
-.unlinked .arrow-link{display:none}
-.library{
-  margin-top:42px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-}
-.library-box{
-  background:#fff;
-  border-radius:21px;
-  padding:23px;
-  box-shadow:var(--shadow);
-}
-.library-box h2{margin:0 0 12px;color:var(--navy);font-size:25px}
-.library-link{
-  display:block;
-  text-decoration:none;
-  padding:11px 0;
-  border-bottom:1px solid #e7eaed;
-  font-weight:700;
-}
-.library-link:last-child{border-bottom:none}
-.library-link span{display:block;color:var(--muted);font-size:13px;font-weight:400}
-.footer{text-align:center;color:var(--muted);margin-top:42px;font-size:14px}
-@media(max-width:780px){
-  .wrap{padding:10px 10px 50px}
-  .hero{min-height:355px;padding:28px 22px}
-  .hero h1{font-size:37px}
-  .hero:after{font-size:80px;top:5px}
-  .top-actions,.library{grid-template-columns:1fr}
-  .journey{margin-left:0}
-  .journey:before{left:28px}
-  .stop{grid-template-columns:58px 1fr;gap:11px}
-  .node{width:58px;height:58px;border-width:6px;font-size:20px}
-  .stop.paris .node{width:64px;height:64px;margin-left:-3px;font-size:22px}
-  .city-card{padding:17px 16px}
-  .city-card h3{font-size:23px;padding-right:34px}
-  .stop.paris .city-card{padding:23px 20px;min-height:230px}
-  .stop.paris .city-card h3{font-size:34px}
-  .arrow-link{right:13px;top:13px}
+a {
+    color: #174ea6;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-
-<header class="hero">
-  <div>
-    <span class="eyebrow">EUROPE SUMMER 2026 · DOOR-TO-DOOR JOURNEY</span>
-    <h1>20 Nights Across Europe</h1>
-    <p>เปิดหน้าเดียวแล้วเห็นลำดับการเดินทางทั้งหมด ตั้งแต่ Halle ถึง Berlin พร้อมคู่มือเมืองและการเดินทางที่กดเปิดได้ทันที</p>
-    <div class="hero-stats">
-      <span>25 Jul – 14 Aug 2026</span>
-      <span>8 city stops</span>
-      <span>4 countries</span>
-      <span>Paris · 5 nights</span>
-    </div>
-  </div>
-</header>
-
-<div class="top-actions">
-  <a class="action master" href="tour-europe-2026/europe-city-walk-2026.html">
-    <strong>Open Master Itinerary →</strong>
-    <span>ตารางทริป โรงแรม รถไฟ และ Door-to-Door ครบทุกช่วง</span>
-  </a>
-  <a class="action rail" href="tour-europe-2026/intercity-rail-guide.html">
-    <strong>Rail Guide →</strong>
-    <span>คู่มือรถไฟข้ามเมือง</span>
-  </a>
-</div>
-
-<h2 class="section-title">Your Journey, In Order</h2>
-<p class="section-lead">เลื่อนจากบนลงล่างตามวันเดินทางจริง — Paris ถูกขยายให้เด่นเป็น Hero City เพราะพักนานที่สุดและเป็นจุดสำคัญที่สุดของทริป</p>
-
-<div class="route-strip" aria-label="Trip route">
-  <span>Halle</span><i>→</i>
-  <span>Frankfurt</span><i>→</i>
-  <span>Köln</span><i>→</i>
-  <span>Amsterdam</span><i>→</i>
-  <span>Brussels</span><i>→</i>
-  <span>Paris</span><i>→</i>
-  <span>Frankfurt</span><i>→</i>
-  <span>Berlin</span>
-</div>
-
-<main class="journey">
-
-  <div class="stop">
-    <div class="node">01</div>
-    <a class="city-card" href="tour-europe-2026/halle-leipzig-day-trip-2026.html">
-      <div class="meta">25–28 JUL · 3 NIGHTS</div>
-      <h3>Halle</h3>
-      <p>เมืองเริ่มต้นของทริป เดินเมืองเก่า และออกไป Leipzig แบบ day trip</p>
-      <div class="tags"><span class="tag">Old Town</span><span class="tag">Leipzig day trip</span></div>
-      <span class="arrow-link">→</span>
-    </a>
-  </div>
-
-  <div class="stop">
-    <div class="node">02</div>
-    <a class="city-card" href="tour-europe-2026/frankfurt-base-2026.html">
-      <div class="meta">28–30 JUL · 2 NIGHTS</div>
-      <h3>Frankfurt · First Stay</h3>
-      <p>Römerberg, Main River, Palmengarten และรอบแรกของการสำรวจแหล่งช้อป</p>
-      <div class="tags"><span class="tag">City-Ost</span><span class="tag">Old Town</span><span class="tag">Shopping scan</span></div>
-      <span class="arrow-link">→</span>
-    </a>
-  </div>
-
-  <div class="stop">
-    <div class="node">03</div>
-    <a class="city-card" href="tour-europe-2026/cologne-base-2026.html">
-      <div class="meta">30 JUL–1 AUG · 2 NIGHTS</div>
-      <h3>Köln</h3>
-      <p>Cathedral, Rhine, Hohenzollern Bridge และเมืองเก่าริมแม่น้ำ</p>
-      <div class="tags"><span class="tag">Ruby Ella</span><span class="tag">Cathedral</span><span class="tag">Rhine</span></div>
-      <span class="arrow-link">→</span>
-    </a>
-  </div>
-
-  <div class="stop">
-    <div class="node">04</div>
-    <a class="city-card" href="tour-europe-2026/amsterdam-base-2026.html">
-      <div class="meta">1–4 AUG · 3 NIGHTS</div>
-      <h3>Amsterdam</h3>
-      <p>คลอง พิพิธภัณฑ์ ย่าน Jordaan และเส้นทางจากฐานที่ Amsterdam Sloterdijk</p>
-      <div class="tags"><span class="tag">Canals</span><span class="tag">Rijksmuseum</span><span class="tag">3-day base</span></div>
-      <span class="arrow-link">→</span>
-    </a>
-  </div>
-
-  <div class="stop">
-    <div class="node">05</div>
-    <a class="city-card" href="tour-europe-2026/brussels-base-2026.html">
-      <div class="meta">4–6 AUG · 2 NIGHTS</div>
-      <h3>Brussels</h3>
-      <p>Grand Place, Mont des Arts, ช็อกโกแลต และฐานใกล้ Botanique</p>
-      <div class="tags"><span class="tag">Grand Place</span><span class="tag">Chocolate</span><span class="tag">Eurostar next</span></div>
-      <span class="arrow-link">→</span>
-    </a>
-  </div>
-
-  <div class="stop paris">
-    <div class="node">06</div>
-    <a class="city-card" href="tour-europe-2026/paris-master-city-guide-2026.html">
-      <span class="hero-label">HERO CITY · LONGEST STAY</span>
-      <div class="meta">6–11 AUGUST · 5 NIGHTS</div>
-      <h3>Paris</h3>
-      <p>จุดสำคัญที่สุดของทริป — Louvre, Eiffel Tower, Versailles, Montmartre, Le Marais และ Latin Quarter พร้อม Door-to-Door Metro plan จาก Hampton Saint-Ouen</p>
-      <div class="tags">
-        <span class="tag">5 nights</span>
-        <span class="tag">Metro 14 base</span>
-        <span class="tag">Versailles</span>
-        <span class="tag">Seine finale</span>
-      </div>
-      <span class="arrow-link">→</span>
-    </a>
-  </div>
-
-  <div class="stop return">
-    <div class="node">07</div>
-    <a class="city-card" href="tour-europe-2026/frankfurt-base-2026.html">
-      <div class="meta">11–13 AUG · 2 NIGHTS</div>
-      <h3>Frankfurt · Final Stay</h3>
-      <p>กลับมาเก็บตก ช้อปของเยอรมัน และเตรียมเดินทาง ICE ไป Berlin</p>
-      <div class="tags"><span class="tag">Near Hbf</span><span class="tag">Final shopping</span><span class="tag">Germany</span></div>
-      <span class="arrow-link">→</span>
-    </a>
-  </div>
-
-  <div class="stop final">
-    <div class="node">08</div>
-    <div class="city-card unlinked">
-      <div class="meta">13–14 AUG · 1 NIGHT</div>
-      <h3>Berlin · Final Stop</h3>
-      <p>Brandenburg Gate, Reichstag, Museum Island และเดินทางต่อไป BER Airport วันที่ 14 August</p>
-      <div class="tags"><span class="tag">Final night</span><span class="tag">BER departure</span></div>
-    </div>
-  </div>
-
-</main>
-
-<section class="library">
-  <div class="library-box">
-    <h2>University Planning</h2>
-    <a class="library-link" href="wirtschaftsmathematik/germany-3-uni-tour-2026.html">
-      Germany 3 Uni Tour 2026
-      <span>เส้นทางดูมหาวิทยาลัย</span>
-    </a>
-    <a class="library-link" href="wirtschaftsmathematik/halle-admission.html">
-      Halle Wirtschaftsmathematik Admission
-      <span>ข้อมูล admission ที่ Halle</span>
-    </a>
-    <a class="library-link" href="wirtschaftsmathematik/m10-health-insurance-checklist.html">
-      M10 Health Insurance Guide
-      <span>Checklist ประกันสุขภาพ</span>
-    </a>
-    <a class="library-link" href="wirtschaftsmathematik/wirtschaftsmathematik-university-career-guide.html">
-      RWTH, KIT หรือ LMU
-      <span>University and career comparison</span>
-    </a>
-  </div>
-
-  <div class="library-box">
-    <h2>How to Use This Site</h2>
-    <p><strong>1.</strong> เปิด Master Itinerary เมื่อต้องการดูภาพรวมทั้งทริป</p>
-    <p><strong>2.</strong> เลื่อน Journey ตามลำดับเมืองแล้วเปิด City Guide ของเมืองนั้น</p>
-    <p><strong>3.</strong> เปิด Rail Guide ก่อนวันเปลี่ยนเมือง</p>
-    <p><strong>4.</strong> Paris เป็น City Master Guide แยก เพราะมีแผนละเอียดที่สุด</p>
-  </div>
-</section>
-
-<div class="footer">
-  PunPoon Notes · Europe Summer 2026<br>
-  Journey order verified against the Master Itinerary.
-</div>
-
+<div class="container">
+<h1>LINE HTML Notes</h1>
+<div class="summary">Published pages: 13</div>
+<div class='item'><div class='folder'>finance</div><a href='finance/poon-global-dividend-etf-study.html'>Poon - Global Dividend ETF Study Shortlist</a></div>
+<div class='item'><div class='folder'>tour-europe-2026</div><a href='tour-europe-2026/amsterdam-base-2026.html'>Amsterdam Base Guide 2026</a></div>
+<div class='item'><div class='folder'>tour-europe-2026</div><a href='tour-europe-2026/brussels-base-2026.html'>Brussels Base Guide 2026</a></div>
+<div class='item'><div class='folder'>tour-europe-2026</div><a href='tour-europe-2026/cologne-base-2026.html'>Cologne Base Guide 2026 — Ruby Ella</a></div>
+<div class='item'><div class='folder'>tour-europe-2026</div><a href='tour-europe-2026/europe-city-walk-2026.html'>Europe Summer 2026 — Master Itinerary</a></div>
+<div class='item'><div class='folder'>tour-europe-2026</div><a href='tour-europe-2026/intercity-rail-guide.html'>European Intercity Rail Guide</a></div>
+<div class='item'><div class='folder'>tour-europe-2026</div><a href='tour-europe-2026/frankfurt-base-2026.html'>Frankfurt Base Guide 2026 — City-Ost</a></div>
+<div class='item'><div class='folder'>tour-europe-2026</div><a href='tour-europe-2026/halle-leipzig-day-trip-2026.html'>Halle to Leipzig Day Trip 2026</a></div>
+<div class='item'><div class='folder'>tour-europe-2026</div><a href='tour-europe-2026/paris-master-city-guide-2026.html'>Paris Master City Guide 2026 — Hampton Saint-Ouen</a></div>
+<div class='item'><div class='folder'>wirtschaftsmathematik</div><a href='wirtschaftsmathematik/germany-3-uni-tour-2026.html'>Germany 3 Uni Tour 2026</a></div>
+<div class='item'><div class='folder'>wirtschaftsmathematik</div><a href='wirtschaftsmathematik/halle-admission.html'>Halle Wirtschaftsmathematik Admission</a></div>
+<div class='item'><div class='folder'>wirtschaftsmathematik</div><a href='wirtschaftsmathematik/m10-health-insurance-checklist.html'>M10 Health Insurance Guide</a></div>
+<div class='item'><div class='folder'>wirtschaftsmathematik</div><a href='wirtschaftsmathematik/wirtschaftsmathematik-university-career-guide.html'>Wirtschaftsmathematik: RWTH, KIT หรือ LMU</a></div>
 </div>
 </body>
 </html>
-
