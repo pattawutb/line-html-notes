@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Save to Apple Notes</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      max-width: 680px;
+      margin: 50px auto;
+      padding: 0 20px;
+      line-height: 1.5;
+    }
+    button {
+      font-size: 18px;
+      padding: 14px 20px;
+      border: 0;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    #preview {
+      white-space: pre-wrap;
+      margin-top: 24px;
+      padding: 16px;
+      background: #f3f3f3;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Save to Apple Notes</h2>
+
+  <p id="status">Opening Apple Notes shortcut...</p>
+
+  <button id="saveButton">
+    Save to Apple Notes
+  </button>
+
+  <div id="preview"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const text = params.get("text") || "";
+
+    const shortcutURL =
+      "shortcuts://run-shortcut" +
+      "?name=" + encodeURIComponent("Save ChatGPT Note") +
+      "&input=text" +
+      "&text=" + encodeURIComponent(text);
+
+    document.getElementById("preview").textContent = text;
+
+    function openShortcut() {
+      if (!text) {
+        document.getElementById("status").textContent =
+          "No note text was provided.";
+        return;
+      }
+
+      window.location.href = shortcutURL;
+    }
+
+    document
+      .getElementById("saveButton")
+      .addEventListener("click", openShortcut);
+
+    if (text) {
+      setTimeout(openShortcut, 400);
+    } else {
+      document.getElementById("status").textContent =
+        "No note text was provided.";
+    }
+  </script>
+</body>
+</html>
