@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>Apple Reminders Test</h1>
-  <p>ทดสอบส่ง Title + Notes จาก HTML ไปยัง Apple Reminders</p>
+  <p>ทดสอบส่ง Title + Notes + Date/Time + URL ไปยัง Apple Reminders</p>
 
   <button onclick="createReminder()">
     Add to Apple Reminders
@@ -15,12 +15,17 @@
 
   <script>
     function createReminder() {
-      const title = "ทดสอบ Title";
+      const title = "ทดสอบ Reminder มีเวลา";
       const notes = "นี่คือ Notes ของ Reminder";
+      const dateTime = "2026-09-13 16:45";
+      const pageUrl = window.location.href;
       const shortcutName = "Create Reminder from HTML";
 
       const reminderData =
-        title + "\n" + notes;
+        title + "\n" +
+        notes + "\n" +
+        dateTime + "\n" +
+        pageUrl;
 
       const url =
         "shortcuts://run-shortcut?name=" +
