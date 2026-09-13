@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Reminders Test</title>
+</head>
+<body>
+  <h1>Apple Reminders Test</h1>
+  <p>ทดสอบส่ง Reminder จาก HTML ไปยัง Apple Reminders</p>
+
+  <button onclick="createReminder()">
+    Add to Apple Reminders
+  </button>
+
+  <script>
+    function createReminder() {
+      const title = "ทดสอบ Reminder จาก HTML";
+      const shortcutName = "Create Reminder from HTML";
+
+      const url =
+        "shortcuts://run-shortcut?name=" +
+        encodeURIComponent(shortcutName) +
+        "&input=text&text=" +
+        encodeURIComponent(title);
+
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
