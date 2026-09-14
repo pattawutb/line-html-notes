@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Save to Apple Notes</title>
+
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -12,6 +13,7 @@
       padding: 0 20px;
       line-height: 1.5;
     }
+
     button {
       font-size: 18px;
       padding: 14px 20px;
@@ -19,6 +21,7 @@
       border-radius: 12px;
       cursor: pointer;
     }
+
     #preview {
       white-space: pre-wrap;
       margin-top: 24px;
@@ -30,6 +33,7 @@
 </head>
 
 <body>
+
   <h2>Save to Apple Notes</h2>
 
   <p id="status">Opening Apple Notes shortcut...</p>
@@ -41,8 +45,33 @@
   <div id="preview"></div>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const text = params.get("text") || "";
+    function getNoteText() {
+      /*
+        Production format:
+        https://.../save-note.html#text=...
+
+        The URL fragment (#...) is processed only in the browser.
+        It is not sent to GitHub Pages, avoiding server URI-length limits.
+
+        Legacy ?text=... links remain supported.
+      */
+
+      const hash = window.location.hash.startsWith("#")
+        ? window.location.hash.substring(1)
+        : window.location.hash;
+
+      const hashParams = new URLSearchParams(hash);
+
+      if (hashParams.has("text")) {
+        return hashParams.get("text") || "";
+      }
+
+      const queryParams = new URLSearchParams(window.location.search);
+
+      return queryParams.get("text") || "";
+    }
+
+    const text = getNoteText();
 
     const shortcutURL =
       "shortcuts://run-shortcut" +
@@ -59,6 +88,9 @@
         return;
       }
 
+      document.getElementById("status").textContent =
+        "Opening Apple Notes...";
+
       window.location.href = shortcutURL;
     }
 
@@ -73,5 +105,6 @@
         "No note text was provided.";
     }
   </script>
+
 </body>
 </html>
