@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI แก้ปัญหา Navier–Stokes — New Scientist 19 Sep 2026</title>
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.65;
+  color: #222;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+}
+h1 { font-size: 1.65rem; line-height: 1.3; }
+h2 {
+  font-size: 1.25rem;
+  margin-top: 32px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+}
+.box {
+  background: #f5f5f5;
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin: 16px 0;
+}
+.key {
+  font-weight: 700;
+}
+.quote {
+  border-left: 4px solid #999;
+  padding-left: 14px;
+  margin: 16px 0;
+  font-style: italic;
+}
+.small {
+  font-size: 0.9rem;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🧮 AI “แก้” Navier–Stokes<br>
+และทำไมวงการคณิตศาสตร์กำลังสั่นสะเทือน</h1>
+
+<p><strong>ที่มา:</strong> New Scientist, 19 September 2026</p>
+
+<div class="box">
+<strong>หมายเหตุ</strong><br>
+สรุปนี้ยึดเฉพาะข้อเท็จจริงและคำกล่าวที่ปรากฏในบทความ New Scientist ชุดนี้
+ยังไม่ได้ fact-check กับแหล่งอื่น และยังไม่ใส่ความเห็นเพิ่มเติม
+</div>
+
+
+<h2>1️⃣ เรื่องใหญ่ที่สุดเกิดอะไรขึ้น?</h2>
+
+<p>
+OpenAI ประกาศว่า AI agents ของบริษัทสามารถแก้ปัญหาสำคัญเกี่ยวกับ
+<strong>Navier–Stokes equations</strong>
+ซึ่งเป็นสมการที่ใช้บรรยายการเคลื่อนที่ของของไหล
+</p>
+
+<p>ตัวอย่างเช่น</p>
+
+<ul>
+<li>อากาศไหลผ่านปีกเครื่องบิน</li>
+<li>น้ำไหลออกจากก๊อก</li>
+<li>การไหลของของเหลวในระบบต่าง ๆ</li>
+</ul>
+
+<p>
+สมการนี้มีอายุประมาณ <strong>200 ปี</strong>
+และถูกใช้งานอย่างกว้างขวางมานานแล้ว
+</p>
+
+<p>แต่มีคำถามพื้นฐานข้อหนึ่งที่นักคณิตศาสตร์ยังตอบไม่ได้:</p>
+
+<div class="box">
+<strong>
+Navier–Stokes จะให้คำตอบที่สมเหตุสมผลเสมอหรือไม่?<br><br>
+หรือบางสถานการณ์สามารถเกิด “blow-up” ได้?
+</strong>
+</div>
+
+
+<h2>2️⃣ “Blow-up” คืออะไร?</h2>
+
+<p>คำว่า blow-up ไม่ได้หมายความว่าน้ำหรืออากาศจะระเบิดจริง ๆ</p>
+
+<p>
+มันหมายถึงสถานการณ์ทางคณิตศาสตร์ที่ค่าบางอย่างในสมการ
+เพิ่มขึ้นจนกลายเป็น <strong>อนันต์</strong>
+</p>
+
+<p>
+New Scientist เปรียบเทียบให้เห็นภาพว่า
+เหมือนจู่ ๆ มีวังน้ำวนเกิดขึ้นในอ่างอาบน้ำ
+แล้วมันหมุนเร็วขึ้นเรื่อย ๆ จนความเร็วกลายเป็นอนันต์
+</p>
+
+<p>
+ปัญหานี้สำคัญมากจน Clay Mathematics Institute
+จัดให้เป็นหนึ่งใน <strong>7 Millennium Prize Problems</strong>
+</p>
+
+<p>มีรางวัลสำหรับการแก้ปัญหาอยู่ที่ <strong>US$1 million</strong></p>
+
+
+<h2>3️⃣ คำตอบที่ OpenAI รายงาน</h2>
+
+<div class="box">
+<strong>Navier–Stokes equations สามารถเกิด blow-up ได้</strong>
+</div>
+
+<p>
+กล่าวคือ มี configuration ทางคณิตศาสตร์ที่ระบบสามารถพัฒนาไปจนเกิด
+singularity ภายในเวลาจำกัด
+</p>
+
+
+<h2>4️⃣ สิ่งที่น่าตกใจมาก: ใช้เวลา 88 ชั่วโมง</h2>
+
+<p>OpenAI เริ่มจากการใช้ <strong>AI agents 1,000 ตัว</strong></p>
+
+<p>
+ให้ agents พยายามสร้าง blow-up ใน
+<strong>Euler equations</strong> ก่อน
+</p>
+
+<p>
+Euler equations เป็นปัญหาที่เกี่ยวข้องกัน
+และสามารถใช้เป็นขั้นบันไดไปสู่ Navier–Stokes
+</p>
+
+<p>
+AI ใช้เวลาประมาณ <strong>50 ชั่วโมง</strong>
+ในการค้นหาและพิสูจน์การเกิด blow-up ในกรณี Euler
+</p>
+
+<p>จากนั้น OpenAI เพิ่มเป็น</p>
+
+<div class="box"><strong>10,000 AI agents</strong></div>
+
+<p>เพื่อขยายผลไปยัง Navier–Stokes เต็มรูปแบบ</p>
+
+<p>ขั้นตอนนี้ใช้เวลาอีกเพียง <strong>11 ชั่วโมง</strong></p>
+
+<p>และนับตั้งแต่ agents ชุดแรกเริ่มทำงานจนได้ solution ทั้งหมด:</p>
+
+<div class="box">
+<strong>
+⏱ 88 ชั่วโมง<br>
+🤖 10,000 AI agents<br>
+💰 ประมาณ US$15 million
+</strong>
+</div>
+
+<p>
+ตัวเลข US$15 ล้าน คือจำนวนที่ OpenAI ระบุว่า
+หากลูกค้าต้องการรัน computation แบบเดียวกัน
+จะมีค่าใช้จ่ายประมาณระดับนี้
+</p>
+
+
+<h2>5️⃣ ใช้ AI รุ่นไหน?</h2>
+
+<p>OpenAI ไม่ได้เปิดเผยชื่อ model ที่ใช้</p>
+
+<p>แต่บริษัทบอกว่า model ดังกล่าว</p>
+
+<div class="quote">“significantly more capable”</div>
+
+<p>กว่า <strong>GPT-6 Astra</strong> รุ่นล่าสุด</p>
+
+<p>
+ดังนั้น ตามบทความนี้
+<strong>ตัวที่แก้ปัญหาไม่ใช่ GPT-6 Astra</strong>
+แต่เป็น model ที่ OpenAI ระบุว่ามีความสามารถสูงกว่านั้น
+</p>
+
+
+<h2>6️⃣ AI พบอะไรจริง ๆ?</h2>
+
+<p>
+AI สร้าง configuration ของของไหลชนิดหนึ่ง
+ซึ่งบทความอธิบายว่าเป็น <strong>spinning whirlpool</strong>
+</p>
+
+<p>มันค่อย ๆ</p>
+
+<div class="box">
+ยาวขึ้น<br>
+↓<br>
+บางลง<br>
+↓<br>
+หมุนรุนแรงขึ้น<br>
+↓<br>
+ความรุนแรงของการหมุน → ∞
+</div>
+
+<p>สิ่งสำคัญคือ proof แสดงว่าเหตุการณ์นี้เกิดขึ้น</p>
+
+<ul>
+<li>ภายในเวลาที่จำกัด — <strong>finite time</strong></li>
+<li>ใช้แรงที่มีขนาดจำกัด — <strong>finite force</strong></li>
+</ul>
+
+<p>จึงไม่จำเป็นต้องสมมุติว่ามีแรงอนันต์จากภายนอกเข้ามาสร้างมัน</p>
+
+
+<h2>7️⃣ แต่ AI ไม่ได้เริ่มจากศูนย์</h2>
+
+<p>นี่เป็นประเด็นที่ New Scientist เน้นมาก</p>
+
+<p>เส้นทางไปสู่ solution นี้ถูกนักคณิตศาสตร์มนุษย์พัฒนามาหลายปีแล้ว</p>
+
+<p><strong>2014 — Thomas Hou และทีมที่ Caltech</strong></p>
+
+<p>
+สร้าง blow-up สำหรับ Euler equations ได้
+แต่ใช้ได้เฉพาะกรณีที่ของไหลถูกจำกัดด้วยผนัง
+</p>
+
+<p>จึงยังไม่ใช่กรณีทั่วไป</p>
+
+<p>
+ต่อมาใน <strong>2021</strong>
+Luis Martínez-Zoroa และ Diego Córdoba พัฒนาวิธีใหม่
+</p>
+
+<p>แนวคิดสำคัญคือ</p>
+
+<div class="box">
+แบ่งของไหลออกเป็น thin layers<br>
+↓<br>
+คำนวณแต่ละ layer<br>
+↓<br>
+นำผลมารวมกัน<br>
+↓<br>
+เกิด cascade ของ effects<br>
+↓<br>
+นำไปสู่ blow-up
+</div>
+
+<p>
+Steven Brunton จาก University of Washington
+กล่าวถึงจุดนี้ว่า AI มีบทบาทสำคัญมาก
+และ scale ของ computation น่าสนใจ
+</p>
+
+<p>แต่</p>
+
+<div class="box"><strong>solution approach ถูกพัฒนาขึ้นโดยมนุษย์</strong></div>
+
+
+<h2>8️⃣ ปัญหาที่ยังค้างอยู่</h2>
+
+<p>
+ผลงานของ Martínez-Zoroa และ Córdoba
+ยังต้องใช้สมมุติฐานเกี่ยวกับ <strong>แรงภายนอกที่ไม่สมจริง</strong>
+</p>
+
+<p>ดังนั้นยังไม่สามารถปิด Millennium Problem ได้</p>
+
+<p>
+ต่อมา Tristan Buckmaster จาก NYU
+และ Levent Alpöge จาก Anthropic
+สามารถตัด requirement ดังกล่าวออก
+สำหรับ Euler equations และกรณีที่เกี่ยวข้อง
+</p>
+
+<p>สิ่งนี้เปิดเส้นทางที่ชัดเจนขึ้นไปสู่ Navier–Stokes</p>
+
+<p>
+และหลังจากนั้นเพียงไม่กี่ชั่วโมง
+<strong>OpenAI ก็เผยแพร่ผลฉบับเต็มของตัวเอง</strong>
+</p>
+
+
+<h2>9️⃣ แล้วเกิด controversy</h2>
+
+<p>
+Buckmaster เล่าว่า เมื่อเขาได้ยินข่าวลือว่า OpenAI กำลังมีความคืบหน้า
+เขาจึงติดต่อ mathematician ที่ OpenAI
+</p>
+
+<p>
+หลังจากพูดคุยกัน เขาบอกว่าสิ่งที่ได้ยินทำให้รู้สึกเป็น
+<strong>“red flag”</strong>
+</p>
+
+<p>
+เพราะแนวทางที่ได้ยินดูคล้ายกับเส้นทางที่
+เขากับ Alpöge กำลังพัฒนาอยู่
+</p>
+
+
+<h2>🔟 ประเด็น Codex</h2>
+
+<p>
+Buckmaster และ Alpöge เคยใช้ <strong>Codex</strong> ในฐานะลูกค้า
+เพื่อทำงานของพวกเขา
+</p>
+
+<p>พวกเขาจึงคาดหวังว่างานดังกล่าวจะเป็น <strong>private customer work</strong></p>
+
+<p>ไม่ใช่งานที่ OpenAI research team จะเข้าถึง</p>
+
+<p>ตรงนี้ต้องแยกข้อเท็จจริงให้ชัด:</p>
+
+<div class="box"><strong>บทความไม่ได้สรุปว่า OpenAI ขโมยผลงาน</strong></div>
+
+<p>แต่รายงานว่ามีคำถามและข้อสงสัยเกี่ยวกับที่มาของงาน</p>
+
+<p>
+OpenAI ปฏิเสธอย่างชัดเจนว่า
+บริษัทใช้ proof หรือ prompts ของ Buckmaster และ Alpöge
+</p>
+
+<p>
+OpenAI ยังระบุว่า
+proof สำหรับ Euler ของ AI แตกต่างจาก proof ของทั้งสองคน
+และไม่มีมนุษย์ของ OpenAI เข้าไปดูงานของพวกเขาใน Codex
+</p>
+
+<p>
+อย่างไรก็ตาม OpenAI โพสต์บน X ว่า
+แม้จะมองว่าไม่น่าเป็นไปได้
+บริษัทไม่สามารถตัดความเป็นไปได้ทั้งหมดว่า
+<strong>de-identified data</strong>
+จากการใช้ผลิตภัณฑ์ของทั้งสองคน
+อาจมีส่วนช่วยในการปรับปรุง models
+</p>
+
+
+<h2>1️⃣1️⃣ แล้วของไหลจริงจะหมุนเร็วเป็นอนันต์หรือไม่?</h2>
+
+<p><strong>ไม่ใช่สิ่งที่บทความกำลังบอก</strong></p>
+
+<p>Navier–Stokes เป็น mathematical model</p>
+
+<p>Steven Brunton อธิบายว่าสมการทุกสมการเป็น approximation</p>
+
+<p>
+Navier–Stokes เป็น approximation ที่ดีมาก
+สำหรับของไหลในสถานการณ์จำนวนมาก
+</p>
+
+<p>แต่เมื่อ model ไปถึงจุดที่ค่าบางอย่างกลายเป็น infinity ก็หมายความว่า</p>
+
+<div class="box">
+<strong>
+model ไม่ได้เป็น representation ที่ดีของโลกจริง
+ตรงบริเวณนั้นอีกแล้ว
+</strong>
+</div>
+
+<p>Navier–Stokes ปฏิบัติต่อของไหลเสมือนเป็น continuous substance</p>
+
+<p>แต่ของไหลจริงประกอบด้วยอะตอม</p>
+
+<p>เมื่อ scale เล็กมาก ๆ จึงจำเป็นต้องใช้ mathematical model อื่น</p>
+
+<p>สำหรับงาน engineering ทั่วไป Brunton บอกว่า</p>
+
+<div class="quote">“Nothing changes for us.”</div>
+
+<p>Navier–Stokes ยังคงใช้กับงานวิศวกรรมต่อไป</p>
+
+
+<h2>1️⃣2️⃣ เรื่องนี้ไม่ได้เกิดขึ้นเพียงครั้งเดียว</h2>
+
+<p>
+New Scientist ยกตัวอย่างผลงาน AI ทางคณิตศาสตร์
+ในช่วงไม่กี่เดือนก่อนหน้านี้ด้วย
+</p>
+
+<ul>
+<li>OpenAI model แก้ conjecture เก่าแก่ของ Paul Erdős</li>
+<li>Claude Fable 5 พบ counterexample ต่อ Jacobian conjecture</li>
+<li>AI formalise Fermat’s Last Theorem ภายใน 11 วัน</li>
+</ul>
+
+<p>
+งาน Fermat นั้น บทความระบุว่าเดิมคาดว่า
+ทีมมนุษย์อาจต้องใช้เวลาประมาณ <strong>5 ปี</strong>
+</p>
+
+<p>
+คำว่า <strong>formalise</strong>
+ไม่ได้หมายความว่า AI ค้นพบ proof ของ Fermat ใหม่
+</p>
+
+<p>
+แต่หมายถึงการนำ proof ไปอยู่ใน formal system/code
+ที่ computer สามารถตรวจสอบ logical correctness ได้
+</p>
+
+
+<h2>1️⃣3️⃣ ปัญหาใหม่: Answers เร็วกว่า Explanations</h2>
+
+<p>New Scientist ชี้ว่า AI proofs มักมีลักษณะ</p>
+
+<ul>
+<li>ซับซ้อน</li>
+<li>ยาว</li>
+<li>ติดตาม reasoning ได้ยาก</li>
+</ul>
+
+<p>
+ถ้าเป้าหมายคือพิสูจน์ว่า theorem ถูกต้อง
+formal verification สามารถช่วยตรวจได้
+</p>
+
+<p>แต่ mathematicians ไม่ได้ต้องการเพียงรู้ว่า</p>
+
+<div class="box"><strong>“มันจริง”</strong></div>
+
+<p>พวกเขาต้องการเข้าใจว่า</p>
+
+<div class="box"><strong>“ทำไมมันถึงจริง?”</strong></div>
+
+<p>New Scientist จึงมองว่าเราอาจเข้าสู่ยุคที่</p>
+
+<div class="quote"><strong>เรามี answers มากกว่า explanations</strong></div>
+
+
+<h2>1️⃣4️⃣ แล้วจะฝึกนักคณิตศาสตร์รุ่นใหม่อย่างไร?</h2>
+
+<p>Helen Wilson จาก UCL ยกตัวอย่างนักศึกษา PhD</p>
+
+<p>ปัจจุบันนักศึกษามักได้รับโจทย์หนึ่ง แล้วใช้เวลาหลายปีทำมัน</p>
+
+<p>ช่วงเวลานั้นไม่ใช่แค่เพื่อหาคำตอบ แต่เป็นกระบวนการฝึก</p>
+
+<ul>
+<li>การคิด</li>
+<li>intuition</li>
+<li>problem solving</li>
+<li>ประสบการณ์ทางคณิตศาสตร์</li>
+</ul>
+
+<p>
+แต่ถ้า AI สามารถทำโจทย์นั้นเสร็จ
+ก่อนที่นักศึกษาจะฝึกตัวเองจากมันได้
+</p>
+
+<p>ระบบการฝึก mathematicians แบบเดิมอาจต้องเปลี่ยน</p>
+
+
+<h2>1️⃣5️⃣ Scenario ที่น่ากังวลกว่า</h2>
+
+<p>ถ้ามนุษย์หยุดสร้าง mathematicians รุ่นใหม่</p>
+
+<p>ในอนาคตอาจมี mathematics บางส่วนที่</p>
+
+<div class="box">
+<strong>
+AI สร้างขึ้น<br>
+AI ตรวจสอบได้<br>
+แต่ไม่มีมนุษย์คนไหนเข้าใจทั้งหมด
+</strong>
+</div>
+
+<p>
+Wilson อธิบายปลายทางว่า
+อาจกลายเป็นอุตสาหกรรมที่ machines ผลิต papers
+แต่ไม่มีใครอ่านหรือเข้าใจมัน
+</p>
+
+
+<h2>1️⃣6️⃣ Terence Tao มองปัญหานี้อย่างไร?</h2>
+
+<p>
+Terence Tao เป็น Fields Medalist
+และเป็นหนึ่งใน mathematicians ชั้นนำของโลก
+</p>
+
+<p>สิ่งที่ Tao กังวลไม่ใช่ว่า <strong>AI ทำคณิตศาสตร์ไม่ได้</strong></p>
+
+<p>แต่กลับตรงกันข้าม</p>
+
+<div class="box"><strong>AI อาจทำ mathematics ได้เร็วเกินไป</strong></div>
+
+
+<h2>1️⃣7️⃣ Mathematics ต้องผ่าน 5 ขั้น</h2>
+
+<p>
+Tao อธิบายว่า mathematical knowledge ที่มีประโยชน์จริง
+ต้องผ่านประมาณ 5 ขั้น
+</p>
+
+<div class="box">
+<strong>
+1. Created<br>
+↓<br>
+2. Checked<br>
+↓<br>
+3. Explained<br>
+↓<br>
+4. Accepted<br>
+↓<br>
+5. Digested
+</strong>
+</div>
+
+<p>หรือ</p>
+
+<p>
+สร้างผลลัพธ์ → ตรวจสอบ → อธิบาย → community ยอมรับ →
+หลอมรวมเข้าเป็นองค์ความรู้ที่สามารถสอนคนรุ่นต่อไป
+</p>
+
+<p>แต่ตามความเห็นของ Tao บริษัท AI สนใจหนักอยู่เพียง</p>
+
+<div class="box"><strong>Create + Check</strong></div>
+
+
+<h2>1️⃣8️⃣ Tao เปรียบเทียบแรงมาก</h2>
+
+<p>เขาเปรียบบริษัท AI ว่าเหมือนเอา</p>
+
+<div class="quote">“carcasses of raw meat”</div>
+
+<p>มากองบนโต๊ะกลางหมู่บ้าน แล้วพูดประมาณว่า</p>
+
+<div class="quote">“นี่ไง ผมแก้ปัญหาอาหารให้แล้ว”</div>
+
+<p>แต่ยังไม่มีใคร <strong>ปรุงมันให้กลายเป็นอาหารที่กินได้</strong></p>
+
+
+<h2>1️⃣9️⃣ AI ทำให้ “speed limit” ของ mathematics หายไป</h2>
+
+<p>ในอดีต mathematicians ก็แข่งขันกันว่าใครค้นพบก่อน</p>
+
+<p>
+แต่ความยากของ mathematics
+ทำหน้าที่เหมือน <strong>natural speed limit</strong>
+</p>
+
+<p>งานหนึ่งอาจต้องใช้เวลาหลายเดือนหรือหลายปี</p>
+
+<p>AI ทำให้ข้อจำกัดเรื่องเวลานั้นลดลงอย่างมาก</p>
+
+<p>Tao จึงกังวลว่าการแข่งขันอาจเปลี่ยนจาก</p>
+
+<div class="box">ใครอธิบายได้ถูกต้อง ชัดเจน และมีประโยชน์</div>
+
+<p>ไปเป็น</p>
+
+<div class="box"><strong>ใครประกาศก่อน</strong></div>
+
+
+<h2>2️⃣0️⃣ วัฒนธรรมการแชร์งานอาจเปลี่ยน</h2>
+
+<p>เดิม mathematicians สามารถบอกเพื่อนร่วมวงการว่า</p>
+
+<div class="quote">“ผมกำลังทำ problem นี้อยู่”</div>
+
+<p>
+เพราะมีคนในโลกเพียงไม่กี่คน
+ที่มีความสามารถพอจะมาแข่งกับเขาได้
+และคนเหล่านั้นมักรู้จักกัน
+</p>
+
+<p>
+แต่เมื่อ AI สามารถเอาแนวคิดที่ยังทำไม่เสร็จ
+ไปเร่งต่อจนเสร็จได้อย่างรวดเร็ว
+</p>
+
+<p>ข้อมูลว่า</p>
+
+<div class="box"><strong>“ใครกำลังทำ problem อะไรอยู่?”</strong></div>
+
+<p>อาจกลายเป็นข้อมูลที่มีมูลค่า</p>
+
+<p>
+Tao จึงกังวลว่านักวิจัยอาจเก็บงานเป็นความลับมากขึ้น
+และวัฒนธรรม open sharing ของ mathematics อาจเสียหาย
+</p>
+
+
+<h2>📌 สรุป Facts ของบทความชุดนี้</h2>
+
+<p>
+New Scientist ไม่ได้กำลังเล่าเพียงว่า
+<strong>“AI แก้โจทย์คณิตศาสตร์ได้อีกข้อหนึ่ง”</strong>
+</p>
+
+<p>สิ่งที่เกิดขึ้นตามบทความคือ:</p>
+
+<div class="box">
+<strong>
+OpenAI ใช้ AI agents จำนวนมาก<br>
+↓<br>
+ค้นหา proof ของปัญหา Navier–Stokes<br>
+↓<br>
+ใช้เวลารวมประมาณ 88 ชั่วโมง<br>
+↓<br>
+10,000 agents มีส่วนในขั้นสำคัญ<br>
+↓<br>
+compute ระดับนี้ถูกประเมินไว้ประมาณ US$15m สำหรับลูกค้า
+</strong>
+</div>
+
+<p>
+แต่ solution นี้ตั้งอยู่บนเส้นทางทางคณิตศาสตร์
+ที่มนุษย์พัฒนามาหลายปี
+</p>
+
+<p>
+โดยเฉพาะงานของ
+Hou,
+Martínez-Zoroa,
+Córdoba,
+Buckmaster
+และ Alpöge
+</p>
+
+<p>
+ผลลัพธ์ตามบทความแสดงว่า
+Navier–Stokes สามารถเกิด mathematical blow-up
+ภายใน finite time ด้วย finite force
+</p>
+
+<p>
+แต่ <strong>ไม่ได้หมายความว่าของไหลจริงจะมีความเร็วอนันต์</strong>
+และไม่ได้หมายความว่า Navier–Stokes
+จะหมดประโยชน์ทางวิศวกรรม
+</p>
+
+<hr>
+
+<div class="box">
+<strong>ประเด็นใหญ่ที่สุดของ Special Report</strong><br><br>
+
+ถ้า AI เริ่มผลิต mathematics ระดับ frontier
+ได้เร็วกว่าที่มนุษย์จะ<br><br>
+
+อ่าน → ตรวจสอบ → เข้าใจ → อธิบาย → สอนต่อ<br><br>
+
+วงการคณิตศาสตร์จะจัดการกับ
+<strong>knowledge ที่เครื่องสร้างได้เร็วกว่ามนุษย์จะเข้าใจ</strong>
+อย่างไร?
+</div>
+
+<p class="small">
+Source: New Scientist International Edition,
+19 September 2026 — Special report: How AI blew up maths.
+</p>
+
+</body>
+</html>
